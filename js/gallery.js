@@ -88,7 +88,7 @@ container.addEventListener('click', handlerClick);
 
 function handlerClick(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget) {
+  if (event.target.tagName !== 'IMG') {
     return;
   }
   const imgOriginal = event.target.dataset.source;
